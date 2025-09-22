@@ -11,7 +11,7 @@ const App = () => {
     <div>
       <NavBar setArticles={setArticles}/>
       <Routes>
-         <Route path="/News-Pulse" element={<Navigate to="/general" replace />} />
+         <Route path="/News-Pulse/" element={<Navigate to="/general" replace />} />
       <Route path='/general' element={<News category ='General' articles={articles} setArticles={setArticles} />}></Route>
       <Route path='/business' element={<News category ='Business' articles={articles} setArticles={setArticles} />}></Route>
       <Route path='/entertainment' element={<News category ='Entertainment' articles={articles} setArticles={setArticles} />}></Route>
