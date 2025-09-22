@@ -2,15 +2,16 @@ import React from "react";
 import { useState } from "react";
 import News from './components/News';
 import NavBar from "./components/NavBar";
-import {Route, Routes} from 'react-router-dom';
+import {Route, Routes, Navigate } from 'react-router-dom';
 
 const App = () => {
   const [articles,setArticles] = useState([])
-  const [category, setCategory] = useState('Business')
+ 
   return(
     <div>
       <NavBar setArticles={setArticles}/>
-      <Routes> <Route path="/" element={<Navigate to="/general" replace />} />
+      <Routes>
+         <Route path="/News-Pulse" element={<Navigate to="/general" replace />} />
       <Route path='/general' element={<News category ='General' articles={articles} setArticles={setArticles} />}></Route>
       <Route path='/business' element={<News category ='Business' articles={articles} setArticles={setArticles} />}></Route>
       <Route path='/entertainment' element={<News category ='Entertainment' articles={articles} setArticles={setArticles} />}></Route>

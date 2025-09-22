@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState,} from "react";
+import React, { use, useCallback, useEffect, useState,} from "react";
 import axios from "axios"
 import NewsItem from './NewsItem';
 import InfiniteScroll from "react-infinite-scroll-component";
@@ -13,7 +13,8 @@ const News = ({articles,setArticles, category}) => {
     if (loading || !hasMore) return;
 
     try {
-      Spinner(true);
+      // Spinner(true);
+      setLoading(true);
       setError(null);
 
       const res = await axios.get(
@@ -28,13 +29,14 @@ const News = ({articles,setArticles, category}) => {
         setHasMore(false); // No more articles to load
       }
 
-      Spinner(false);
+      // Spinner(false);
     } catch (error) {
       console.log(error);
       setError("Failed to fetch news");
-    } finally {
-      Spinner(false);
-    }
+    } 
+    // finally {
+      // Spinner(false);
+    // }
   }, [category, page, hasMore, loading, setArticles]);
 
   
@@ -49,8 +51,6 @@ const News = ({articles,setArticles, category}) => {
   useEffect(()=>{
     fetchAllNews();
   },[page,category]);
-
-
 
   return(
      <>
