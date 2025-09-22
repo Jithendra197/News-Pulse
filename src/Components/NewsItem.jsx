@@ -9,7 +9,7 @@ const NewsItem = ({article}) => {
   return (
     <>
          
-    <div className=" max-w-md mx-auto w-80 md:w-70 lg:w-70 gap-4 bg-gray-300 hover:scale-105 transition-all rounded-xl shadow-md overflow-hidden hover:shadow-lg duration-300">
+    <div className=" max-w-md mx-auto w-100 md:w-70 lg:w-70 gap-4 bg-gray-300 hover:scale-105 transition-all rounded-xl shadow-md overflow-hidden hover:shadow-lg duration-300">
           <img src={image ? image : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fstock-photos%2Fnature-and-landscapes&psig=AOvVaw1BPFONWU_wTJnpuSeVqc04&ust=1758614492328000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJimwNfz648DFQAAAAAdAAAAABAE"} className="h-48 w-full rounded-lg object-cover bg-gray-200" alt={title}></img>
       
           <div className="p-4">
