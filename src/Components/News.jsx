@@ -19,7 +19,7 @@ const News = ({articles,setArticles, category}) => {
 
       const res = await axios.get(
         
-        `https://gnews.io/api/v4/top-headlines?&lang=en&category=${category}&max=12&apikey=3eb7434e6ad49f23196dbfb1468c1b80&page=${page}`
+        `https://gnews.io/api/v4/top-headlines?&lang=en&category=${category}&max=12&apikey=e4838870b3b20fc976e4e542f387e0a8&page=${page}`
       );
 
       // Append new articles instead of replacing
