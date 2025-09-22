@@ -4,13 +4,13 @@ import book from '../assets/book.jpg'
 
 const NewsItem = ({article}) => {
 
-  const {source, title, desrcription, url, image, publishedAt,author} = article
+  const {source, title, url, image, publishedAt} = article
 
   return (
     <>
          
-    <div className=" max-w-md mx-auto bg-gray-300 hover:scale-105 transition-all rounded-xl shadow-md overflow-hidden hover:shadow-lg duration-300">
-          <img src={image ? image : {book}} className="h-48 w-full rounded-lg object-cover bg-gray-200" alt={title}></img>
+    <div className=" max-w-md mx-auto sm:w-49 bg-gray-300 hover:scale-105 transition-all rounded-xl shadow-md overflow-hidden hover:shadow-lg duration-300">
+          <img src={image} className="h-48 w-full rounded-lg object-cover bg-gray-200" alt={title}></img>
       
           <div className="p-4">
            
