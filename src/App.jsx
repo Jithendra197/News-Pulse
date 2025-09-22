@@ -10,8 +10,7 @@ const App = () => {
   return(
     <div>
       <NavBar setArticles={setArticles}/>
-      <Routes>
-      <Route path='/' element={<News category ='General' articles={articles} setArticles={setArticles} />}></Route>
+      <Routes> <Route path="/" element={<Navigate to="/general" replace />} />
       <Route path='/general' element={<News category ='General' articles={articles} setArticles={setArticles} />}></Route>
       <Route path='/business' element={<News category ='Business' articles={articles} setArticles={setArticles} />}></Route>
       <Route path='/entertainment' element={<News category ='Entertainment' articles={articles} setArticles={setArticles} />}></Route>

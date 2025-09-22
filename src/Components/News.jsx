@@ -39,21 +39,15 @@ const News = ({articles,setArticles, category}) => {
 
   
   useEffect(() => {
-    setArticles([]);
+    setArticles([]);      // Clear old articles when category changes
     setPage(1);
     setHasMore(true);
-  },[category,setArticles]);
-
-   useEffect(() => {
-  // This will fetch default news on page load and when category changes
-  if (category) {
     fetchAllNews();
-  }
-}, [category]);
+  }, [category]);
+
 
   useEffect(()=>{
     fetchAllNews();
-
   },[page,category]);
 
 

@@ -38,7 +38,7 @@ const NavBar = ({setArticles}) => {
         
                 
         <div className="md:hidden">           
-      {/* Navbar */}
+    
       <div className="absolute top-0 right-0 text-white p-3">
         
         <button  onClick={() => setOpen(!open)}>
@@ -46,10 +46,10 @@ const NavBar = ({setArticles}) => {
         </button>
       </div>
     
-      {/* Dropdown Menu */}
+   
       {open && (
         <div className="absolute right-0 mt-0 w-48 h-100 bg-white shadow-lg rounded-lg p-2 z-50">
-          {/* Close Button */}
+         
           <div className="flex justify-end mb-2">
             <button onClick={() => setOpen(!open)}>
               <FaTimes size={20} />
